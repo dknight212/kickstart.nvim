@@ -20,7 +20,7 @@ return {
     workspaces = {
       {
         name = 'personal',
-        path = 'C:\\Users\\david\\Documents\\Obsidian\\Vault\\Obsidian',
+        path = 'C:\\Users\\david\\Code\\Obsidian',
       },
     },
 
