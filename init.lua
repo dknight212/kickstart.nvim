@@ -130,6 +130,9 @@ vim.opt.smartcase = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
+-- Show fold column
+vim.opt.foldcolumn = '2'
+
 -- Decrease update time
 vim.opt.updatetime = 250
 
@@ -208,6 +211,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
   end,
+})
+
+-- autosave manual folds
+-- from https://stackoverflow.com/questions/37552913/vim-how-to-keep-folds-on-save
+vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
+  pattern = { '*.*' },
+  desc = 'save view (folds), when closing file',
+  command = 'mkview',
+})
+vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
+  pattern = { '*.*' },
+  desc = 'load view (folds), when opening file',
+  command = 'silent! loadview',
 })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
