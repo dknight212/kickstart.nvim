@@ -1,4 +1,5 @@
--- load custom keymaps
+-- load custom settings and keymaps
+require 'custom.settings'
 require 'custom.keymaps'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
