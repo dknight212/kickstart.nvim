@@ -40,6 +40,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Use jk to exit nornal mode
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Escape from insert mode' })
 
+-- oil.nvim
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
