@@ -61,6 +61,19 @@ return { -- Fuzzy Finder (files, lsp, etc)
       },
     }
 
+    local actions = require 'telescope.actions'
+    require('telescope').setup {
+      pickers = {
+        buffers = {
+          mappings = {
+            i = {
+              ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
+            },
+          },
+        },
+      },
+    }
+
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
