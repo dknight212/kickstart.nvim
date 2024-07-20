@@ -11,6 +11,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Settings
 vim.keymap.set('n', '<leader>vl', ':Lazy<CR>', { desc = 'Open Lazy dialog' })
 vim.keymap.set('n', '<leader>vm', ':Mason<CR>', { desc = 'Open Lazy dialog' })
+vim.keymap.set('n', '<leader>vp', ':e ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1<CR>', { desc = 'Open PowerShell config' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
