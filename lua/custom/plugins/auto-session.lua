@@ -4,7 +4,7 @@ return {
     local auto_session = require 'auto-session'
 
     auto_session.setup {
-      auto_restore_enabled = false,
+      auto_restore_enabled = true,
       auto_session_suppress_dirs = { '~/', '~/Downloads', '~/Documents' },
       session_lens = {
         -- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
