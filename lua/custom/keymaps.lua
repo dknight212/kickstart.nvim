@@ -43,6 +43,10 @@ vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Escape from insert mode' })
 -- oil.nvim
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
+-- nvim-minimap
+vim.keymap.set('n', '<leader>nn', '<CMD>MinimapToggle<CR>', { desc = 'Toggle minimap' })
+vim.keymap.set('n', '<leader>nr', '<CMD>MinimapRefresh<CR>', { desc = 'Refresh minimap' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

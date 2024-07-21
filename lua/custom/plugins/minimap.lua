@@ -1,0 +1,3 @@
+return {
+  'rinx/nvim-minimap',
+}
