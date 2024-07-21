@@ -5,7 +5,8 @@ return {
 
     auto_session.setup {
       auto_restore_enabled = true,
-      auto_session_suppress_dirs = { '~/', '~/Downloads', '~/Documents' },
+      auto_save_enabled = true,
+      auto_session_suppress_dirs = { '~/', '~/Downloads', '~/Documents', '~/Code' },
       session_lens = {
         -- If load_on_setup is set to false, one needs to eventually call `require("auto-session").setup_session_lens()` if they want to use session-lens.
         load_on_setup = true,
