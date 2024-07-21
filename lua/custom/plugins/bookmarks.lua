@@ -15,13 +15,13 @@ return {
       on_attach = function(bufnr)
         local bm = require 'bookmarks'
         local map = vim.keymap.set
-        map('n', 'mm', bm.bookmark_toggle, { desc = 'Bookmark toggle' }) -- add or remove bookmark at current line
-        map('n', 'mi', bm.bookmark_ann, { desc = 'Bookmark annotate' }) -- add or edit mark annotation at current line
-        map('n', 'mc', bm.bookmark_clean) -- clean all marks in local buffer
-        map('n', 'mn', bm.bookmark_next) -- jump to next mark in local buffer
-        map('n', 'mp', bm.bookmark_prev) -- jump to previous mark in local buffer
-        map('n', 'ml', bm.bookmark_list) -- show marked file list in quickfix window
-        map('n', 'mx', bm.bookmark_clear_all) -- removes all bookmarks
+        map('n', '<leader>mm', bm.bookmark_toggle, { desc = 'Bookmark toggle at current line' }) -- add or remove bookmark at current line
+        map('n', '<leader>mi', bm.bookmark_ann, { desc = 'Bookmark annotate at current line' }) -- add or edit mark annotation at current line
+        map('n', '<leader>mc', bm.bookmark_clean, { desc = 'Bookmark clean in local buffer' }) -- clean all marks in local buffer
+        map('n', '<leader>mn', bm.bookmark_next, { desc = 'Go to next bookmark in local buffer' }) -- jump to next mark in local buffer
+        map('n', '<leader>mp', bm.bookmark_prev, { desc = 'Go to previous bookmark in local buffer' }) -- jump to previous mark in local buffer
+        map('n', '<leader>ml', bm.bookmark_list, { desc = 'Show bookmark list in quickfix window' }) -- show marked file list in quickfix window
+        map('n', '<leader>mx', bm.bookmark_clear_all, { desc = 'Remove all bookmarks' }) -- removes all bookmarks
       end,
     }
   end,
