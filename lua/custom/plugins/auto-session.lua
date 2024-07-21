@@ -19,6 +19,8 @@ return {
     local keymap = vim.keymap
 
     keymap.set('n', '<leader>wr', '<cmd>SessionRestore<CR>', { desc = 'Restore session for cwd' }) -- restore last workspace session for current directory
-    keymap.set('n', '<leader>wx', '<cmd>SessionSave<CR>', { desc = 'Save session for current working directory' }) -- save workspace session for current working directory
+    keymap.set('n', '<leader>wx', '<cmd>SessionSave<CR>', { desc = 'Save session for cwd' }) -- save workspace session for current working directory
+    keymap.set('n', '<leader>wd', '<cmd>SessionDelete<CR>', { desc = 'Delete session for cwd' }) -- save workspace session for current working directory
+    keymap.set('n', '<leader>wp', '<cmd>SessionPurgeOrphaned<CR>', { desc = 'Remove orphaned sessions with no directory left' }) -- save workspace session for current working directory
   end,
 }
