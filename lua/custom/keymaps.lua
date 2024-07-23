@@ -47,6 +47,9 @@ vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 vim.keymap.set('n', '<leader>nn', '<CMD>MinimapToggle<CR>', { desc = 'Toggle minimap' })
 vim.keymap.set('n', '<leader>nr', '<CMD>MinimapRefresh<CR>', { desc = 'Refresh minimap' })
 
+-- noice
+vim.keymap.set('n', '<leader>no', '<CMD>Noice dismiss<CR>', { desc = 'Dismiss Noice messages' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
