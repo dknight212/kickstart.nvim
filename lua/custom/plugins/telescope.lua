@@ -76,6 +76,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
+    require('telescope').load_extension 'grapple'
     pcall(require('telescope').load_extension, 'ui-select')
 
     -- See `:help telescope.builtin`
@@ -91,6 +92,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
     -- vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     -- vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+    vim.keymap.set('n', '<leader>st', ':Telescope grapple tags<CR>', { desc = '[S]earch Grapple [T]ags' })
     vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
     vim.keymap.set('n', '<leader>sx', require('auto-session.session-lens').search_session, { desc = '[S]earch Session Management' })
     vim.keymap.set('n', '<leader>sy', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[S]earch Workspace Symbols' })
